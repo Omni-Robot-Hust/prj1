@@ -25,8 +25,8 @@ class RawOdom:
         self.rate = rospy.Rate(50)
     
     def callback(self, msg):
-        self.vx = msg.vector.x
-        self.vy = msg.vector.y
+        self.v_left = msg.vector.x
+        self.v_right = msg.vector.y
     
     def run(self):
         while not rospy.is_shutdown():
