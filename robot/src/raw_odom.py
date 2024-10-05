@@ -22,7 +22,7 @@ class RawOdom:
         self.th = 0.0
         self.current_time = rospy.Time.now()
         self.last_time = rospy.Time.now()
-        rate = rospy.Rate(50)
+        self.rate = rospy.Rate(50)
     
     def callback(self, msg):
         self.vx = msg.vector.x
